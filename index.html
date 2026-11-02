@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMON GONZALEZ Servicios Funerarios | San Rafael, Región del Maule</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Cinzel & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            100: '#FFF8DC',
+                            300: '#F3E5AB',
+                            400: '#E5C158',
+                            500: '#D4AF37',
+                            600: '#B8860B',
+                            700: '#996515',
+                            900: '#5C3A00',
+                        },
+                        dark: {
+                            900: '#0B0B0C',
+                            800: '#131316',
+                            700: '#1C1C22',
+                            600: '#2A2A33',
+                            500: '#3F3F4C'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF1B0 0%, #D4AF37 50%, #996515 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-glow {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
+        }
+        .gold-glow-lg {
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.25);
+        }
+        @keyframes flicker {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.9; }
+            25% { transform: scale(1.08) rotate(-1deg); opacity: 1; }
+            50% { transform: scale(0.95) rotate(1deg); opacity: 0.85; }
+            75% { transform: scale(1.04) rotate(-0.5deg); opacity: 0.95; }
+        }
+        .flame {
+            animation: flicker 1.8s infinite ease-in-out;
+            transform-origin: center bottom;
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-gray-200 font-sans antialiased selection:bg-gold-500 selection:text-black pb-20 md:pb-0">
+
+    <!-- TOP EMERGENCY ALERT BAR -->
+    <div class="bg-gradient-to-r from-gold-900 via-dark-800 to-gold-900 text-gold-300 text-xs md:text-sm py-2 px-4 border-b border-gold-600/30">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-1">
+            <div class="flex items-center gap-2">
+                <span class="inline-block w-2.5 h-2.5 rounded-full bg-red-500 animate-ping"></span>
+                <span class="font-medium text-white">Atención de Urgencia 24 Horas en San Rafael y Región del Maule</span>
+            </div>
+            <div class="flex items-center gap-4 text-xs">
+                <span><i class="fa-solid fa-location-dot text-gold-400 mr-1"></i> Av. Poniente c/ Bascuñán, San Rafael</span>
+                <a href="tel:+56991403031" class="text-gold-400 hover:text-white transition font-bold"><i class="fa-solid fa-phone mr-1"></i> +56 9 9140 3031</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header class="sticky top-0 z-40 bg-dark-900/95 backdrop-blur-md border-b border-gold-600/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo Section -->
+            <a href="#" class="flex items-center gap-3 group">
+                <!-- Golden Laurel Monogram Icon -->
+                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-400 via-gold-600 to-gold-900 p-[1.5px] flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                    <div class="w-full h-full bg-dark-900 rounded-full flex items-center justify-center relative">
+                        <!-- Laurel Leaf Icon SVG overlay -->
+                        <svg class="absolute w-8 h-8 text-gold-500/40" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,2C10.5,4.5 9,7.5 9,11C9,14.5 10.5,17.5 12,20C13.5,17.5 15,14.5 15,11C15,7.5 13.5,4.5 12,2Z" opacity="0.3"/>
+                        </svg>
+                        <span class="font-serif font-extrabold text-2xl gold-gradient-text z-10">G</span>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-base sm:text-xl font-serif font-bold text-white tracking-wide leading-none">SIMON GONZALEZ</span>
+                    <span class="text-[10px] tracking-widest text-gold-400 font-serif uppercase mt-1">Servicios Funerarios</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-6 text-xs font-medium uppercase tracking-wider">
+                <a href="#asistencia" class="text-gray-300 hover:text-gold-400 transition">Cuota Mortuoria</a>
+                <a href="#pasos" class="text-gray-300 hover:text-gold-400 transition">¿Qué Hacer?</a>
+                <a href="#servicios" class="text-gray-300 hover:text-gold-400 transition">Servicios</a>
+                <a href="#obituario" class="text-gray-300 hover:text-gold-400 transition">Obituario Digital</a>
+                <a href="#ubicacion" class="text-gray-300 hover:text-gold-400 transition">San Rafael</a>
+            </nav>
+
+            <!-- Call Actions -->
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/56991403031?text=Hola,%20necesito%20asistencia%20funeraria%20urgente%20en%20San%20Rafael" target="_blank" class="hidden sm:flex items-center gap-2 bg-emerald-700/30 hover:bg-emerald-600/50 text-emerald-300 border border-emerald-500/40 px-3 py-2 rounded-lg text-xs font-semibold transition">
+                    <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="tel:+56991403031" class="flex items-center gap-2 bg-gradient-to-r from-gold-600 to-gold-500 hover:from-gold-500 hover:to-gold-400 text-dark-900 font-bold px-4 py-2.5 rounded-lg text-xs sm:text-sm shadow-md transition transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-phone-flip"></i>
+                    <span class="hidden sm:inline">Llamar 24/7</span>
+                    <span class="sm:hidden">Llamar</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative py-16 md:py-24 overflow-hidden border-b border-gold-600/20">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gold-600/10 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-900/40 border border-gold-500/30 text-gold-300 text-xs font-medium mb-6">
+                        <i class="fa-solid fa-shield-halved text-gold-400"></i>
+                        <span>Servicios Funerarios Integrales en San Rafael, Maule</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight mb-6">
+                        Acompañándote con <span class="gold-gradient-text">dignidad y respeto</span> en el momento que más lo necesitas.
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Atención humana e inmediata las 24 horas. Nos encargamos del traslado, velatorio, sepultura o cremación, y gestionamos <strong>todos los trámites de Cuota Mortuoria (IPS, AFP, CAPREDENA)</strong> para tranquilidad de tu familia.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8">
+                        <a href="tel:+56991403031" class="w-full sm:w-auto flex items-center justify-center gap-3 bg-gradient-to-r from-gold-500 via-gold-400 to-gold-600 text-dark-900 font-bold px-8 py-4 rounded-xl text-base shadow-lg gold-glow hover:scale-105 transition duration-200">
+                            <i class="fa-solid fa-phone-volume text-xl"></i>
+                            <span>Asistencia Inmediata 24/7 (+56 9 9140 3031)</span>
+                        </a>
+                        <a href="#asistencia" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-dark-700/80 hover:bg-dark-600 text-white border border-gold-500/40 px-6 py-4 rounded-xl text-base font-semibold transition">
+                            <i class="fa-solid fa-calculator text-gold-400"></i>
+                            <span>Simular Cuota Mortuoria</span>
+                        </a>
+                    </div>
+
+                    <!-- Social proof & location -->
+                    <div class="pt-6 border-t border-dark-700 flex flex-wrap justify-center lg:justify-start gap-6 text-xs text-gray-400">
+                        <a href="https://www.facebook.com/search/top?q=Funeraria%20Simon%20Gonzalez" target="_blank" class="flex items-center gap-2 hover:text-gold-400 transition">
+                            <i class="fa-brands fa-facebook text-gold-400 text-base"></i>
+                            <span>Facebook: <strong>Funeraria Simon Gonzalez</strong></span>
+                        </a>
+                        <a href="https://www.instagram.com/funeralessimongonzalez/" target="_blank" class="flex items-center gap-2 hover:text-gold-400 transition">
+                            <i class="fa-brands fa-instagram text-gold-400 text-base"></i>
+                            <span>Instagram: <strong>@funeralessimongonzalez</strong></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Urgency Box Column -->
+                <div class="lg:col-span-5">
+                    <div class="bg-gradient-to-b from-dark-800 to-dark-900 p-6 sm:p-8 rounded-2xl border border-gold-500/30 shadow-2xl gold-glow relative">
+                        <div class="absolute -top-3 right-6 bg-gold-500 text-dark-900 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                            Atención Inmediata
+                        </div>
+
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 rounded-full bg-dark-700 border border-gold-500/40 mx-auto flex items-center justify-center mb-3">
+                                <span class="font-serif font-bold text-2xl gold-gradient-text">G</span>
+                            </div>
+                            <h3 class="font-serif font-bold text-xl text-white">¿Ocurrió un fallecimiento?</h3>
+                            <p class="text-xs text-gray-400 mt-1">Estamos ubicados en Av. Poniente c/ Bascuñán (frente a la placilla) para responder al instante.</p>
+                        </div>
+
+                        <div class="space-y-3 mb-6 text-sm">
+                            <div class="flex items-start gap-3 bg-dark-700/50 p-3 rounded-lg border border-dark-600">
+                                <span class="bg-gold-500/20 text-gold-400 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0">1</span>
+                                <span class="text-gray-300 text-xs">Llámanos a cualquier hora del día o noche al <strong>+56 9 9140 3031</strong>.</span>
+                            </div>
+                            <div class="flex items-start gap-3 bg-dark-700/50 p-3 rounded-lg border border-dark-600">
+                                <span class="bg-gold-500/20 text-gold-400 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0">2</span>
+                                <span class="text-gray-300 text-xs">Activamos nuestro vehículo de traslado inmediato a domicilio u hospital.</span>
+                            </div>
+                            <div class="flex items-start gap-3 bg-dark-700/50 p-3 rounded-lg border border-dark-600">
+                                <span class="bg-gold-500/20 text-gold-400 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0">3</span>
+                                <span class="text-gray-300 text-xs">Gestionamos el cobro de la Cuota Mortuoria con IPS / AFP.</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <a href="tel:+56991403031" class="w-full bg-red-700 hover:bg-red-600 text-white font-bold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 transition text-xs sm:text-sm shadow-md">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>LLAMAR AHORA: +56 9 9140 3031</span>
+                            </a>
+                            <a href="https://wa.me/56991403031?text=Hola,%20necesito%20asistencia%20funeraria%20urgente%20en%20San%20Rafael" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition text-xs sm:text-sm">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                <span>Escribir por WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EL PLUSS DIFFERENTIATOR #1: INTERACTIVE CUOTA MORTUORIA ASSISTANT -->
+    <section id="asistencia" class="py-16 bg-dark-800 relative border-b border-gold-600/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-gold-400 text-xs font-bold tracking-widest uppercase mb-2 block">Asesoría Gratuita y Tramitación Directa</span>
+                <h2 class="text-2xl sm:text-4xl font-serif font-bold text-white mb-4">
+                    Orientador de Cuota Mortuoria
+                </h2>
+                <p class="text-gray-300 text-sm sm:text-base">
+                    En <strong>SIMON GONZALEZ Servicios Funerarios</strong> cobramos directamente a las instituciones previsionales en Chile. Tu familia no necesita disponer del dinero total al instante.
+                </p>
+            </div>
+
+            <!-- Calculator Widget -->
+            <div class="bg-dark-900 rounded-2xl border border-gold-500/30 p-6 sm:p-8 max-w-4xl mx-auto shadow-xl">
+                <label class="block text-sm font-medium text-gold-300 mb-4 text-center sm:text-left">
+                    <i class="fa-solid fa-building-columns mr-2"></i>Selecciona la previsión o fondo del fallecido para ver la cobertura:
+                </label>
+                
+                <!-- Institution Buttons -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+                    <button onclick="selectPrevision('IPS')" id="btn-IPS" class="prevision-btn p-4 rounded-xl border border-gold-500/40 bg-dark-700 flex flex-col items-center justify-center text-center transition group">
+                        <i class="fa-solid fa-users text-2xl text-gold-400 mb-2 group-hover:scale-110 transition-transform"></i>
+                        <span class="font-bold text-xs text-white">IPS / Fonasa</span>
+                        <span class="text-[10px] text-gray-400 mt-1">PGU / Pensionados</span>
+                    </button>
+
+                    <button onclick="selectPrevision('AFP')" id="btn-AFP" class="prevision-btn p-4 rounded-xl border border-dark-600 bg-dark-800 flex flex-col items-center justify-center text-center transition group">
+                        <i class="fa-solid fa-chart-line text-2xl text-gold-400 mb-2 group-hover:scale-110 transition-transform"></i>
+                        <span class="font-bold text-xs text-white">AFP</span>
+                        <span class="text-[10px] text-gray-400 mt-1">Habitat, Provida, etc.</span>
+                    </button>
+
+                    <button onclick="selectPrevision('CAPREDENA')" id="btn-CAPREDENA" class="prevision-btn p-4 rounded-xl border border-dark-600 bg-dark-800 flex flex-col items-center justify-center text-center transition group">
+                        <i class="fa-solid fa-award text-2xl text-gold-400 mb-2 group-hover:scale-110 transition-transform"></i>
+                        <span class="font-bold text-xs text-white">Capredena / Dipreca</span>
+                        <span class="text-[10px] text-gray-400 mt-1">FF.AA. y Carabineros</span>
+                    </button>
+
+                    <button onclick="selectPrevision('SEGUROS')" id="btn-SEGUROS" class="prevision-btn p-4 rounded-xl border border-dark-600 bg-dark-800 flex flex-col items-center justify-center text-center transition group">
+                        <i class="fa-solid fa-file-contract text-2xl text-gold-400 mb-2 group-hover:scale-110 transition-transform"></i>
+                        <span class="font-bold text-xs text-white">Seguro de Vida</span>
+                        <span class="text-[10px] text-gray-400 mt-1">Compañías Privadas</span>
+                    </button>
+                </div>
+
+                <!-- Dynamic Output Box -->
+                <div id="prevision-result" class="bg-dark-800 border border-gold-500/20 rounded-xl p-6 text-left">
+                    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-4 border-b border-dark-700">
+                        <div>
+                            <span class="text-xs uppercase tracking-wider text-gold-400 font-bold">Cobertura Estimada IPS / Fonasa</span>
+                            <h3 id="result-title" class="text-lg sm:text-xl font-bold text-white mt-1">Asignación por Muerte IPS (Hasta 15 UF aprox.)</h3>
+                        </div>
+                        <div class="bg-gold-500/10 border border-gold-500/30 px-4 py-2 rounded-lg">
+                            <span class="text-xs text-gold-300 block">Trámite Directo</span>
+                            <span id="result-amount" class="text-base sm:text-lg font-bold text-gold-400">15 UF (~$570.000 - $680.000 CLP)</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 space-y-3 text-xs sm:text-sm text-gray-300">
+                        <p id="result-desc">
+                            El Instituto de Previsión Social (IPS) otorga la Asignación por Muerte. **Realizamos el trámite de cobro directamente ante el Estado**, descontando este monto de tu servicio.
+                        </p>
+                        <div class="flex items-center gap-2 text-xs text-gold-300 pt-1">
+                            <i class="fa-solid fa-check-circle text-gold-400"></i>
+                            <span>Gestionamos el certificado de defunción e inscripción en el Registro Civil de San Rafael.</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-dark-700 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <span class="text-xs text-gray-400">¿Quieres revisar la previsión de tu familiar?</span>
+                        <a id="result-whatsapp" href="https://wa.me/56991403031?text=Hola,%20quisiera%20consultar%20por%20la%20Cuota%20Mortuoria%20de%20IPS%20en%20San%20Rafael" target="_blank" class="w-full sm:w-auto bg-gold-500 hover:bg-gold-400 text-dark-900 font-bold px-5 py-2.5 rounded-lg text-xs flex items-center justify-center gap-2 transition">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Consultar Gratis al +56 9 9140 3031</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EL PLUSS DIFFERENTIATOR #2: DIGITAL OBITUARY DEMO -->
+    <section id="obituario" class="py-16 bg-dark-900 border-b border-gold-600/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5">
+                    <span class="text-gold-400 text-xs font-bold tracking-widest uppercase mb-2 block">Valor Agregado Exclusivo</span>
+                    <h2 class="text-2xl sm:text-4xl font-serif font-bold text-white mb-4">
+                        Obituario Digital y Recuerdos en Línea
+                    </h2>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                        Ofrecemos a las familias de San Rafael un **sitio de homenaje digital en línea** sin costo adicional para compartir la información del funeral por WhatsApp y recibir muestras de afecto.
+                    </p>
+                    <ul class="space-y-3 text-xs sm:text-sm text-gray-300 mb-8">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
+                            <span><strong>Difusión Inmediata por WhatsApp:</strong> Envía la ubicación del velatorio, misa y sepultura con un solo toque.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
+                            <span><strong>Encendido de Velas Virtuales:</strong> Amigos y familiares lejanos pueden rendir homenaje y dejar mensajes.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
+                            <span><strong>GPS Directo a San Rafael:</strong> Enlace a Google Maps para llegar a la parroquia o cementerio.</span>
+                        </li>
+                    </ul>
+
+                    <div class="p-4 bg-dark-800 rounded-xl border border-gold-500/30 text-xs text-gold-300 flex items-center gap-3">
+                        <i class="fa-solid fa-star text-xl text-gold-400"></i>
+                        <span>Un recuerdo emotivo que une a la comunidad de San Rafael dentro y fuera de la comuna.</span>
+                    </div>
+                </div>
+
+                <!-- Live Demo Card -->
+                <div class="lg:col-span-7">
+                    <div class="bg-gradient-to-b from-dark-800 to-dark-900 rounded-2xl border border-gold-500/40 p-6 sm:p-8 shadow-2xl relative gold-glow">
+                        <div class="flex items-center justify-between pb-4 mb-6 border-b border-dark-700">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-red-500 inline-block"></span>
+                                <span class="text-xs text-gray-400 uppercase tracking-wider font-semibold">Demostración de Obituario Digital</span>
+                            </div>
+                            <span class="text-[10px] bg-gold-500/10 text-gold-400 border border-gold-500/30 px-2.5 py-1 rounded-full font-bold">Incluido en el Servicio</span>
+                        </div>
+
+                        <!-- Memorial Card Content -->
+                        <div class="text-center max-w-md mx-auto">
+                            <!-- Candle Graphic -->
+                            <div class="relative w-16 h-20 mx-auto mb-3 flex flex-col items-center justify-end">
+                                <div id="candle-flame" class="w-4 h-6 bg-gradient-to-t from-orange-500 via-yellow-400 to-white rounded-full flame shadow-lg shadow-orange-500/50"></div>
+                                <div class="w-8 h-12 bg-gradient-to-r from-amber-100 to-amber-200 rounded-t-sm shadow-inner border-t border-amber-300"></div>
+                            </div>
+
+                            <h3 class="font-serif font-bold text-2xl text-white">En Memoria de Juan Pérez González</h3>
+                            <p class="text-[11px] text-gold-400 tracking-widest uppercase my-1 font-serif">1948 - 2026 • San Rafael, Chile</p>
+                            <p class="text-xs text-gray-400 italic mb-6">"Su recuerdo y enseñanzas vivirán por siempre en nosotros."</p>
+
+                            <!-- Funeral Details Box -->
+                            <div class="bg-dark-700/60 p-4 rounded-xl border border-dark-600 text-left text-xs space-y-2 mb-6">
+                                <div class="flex items-center justify-between text-gray-300">
+                                    <span><i class="fa-solid fa-church text-gold-400 mr-2"></i><strong>Velatorio:</strong> Parroquia San Rafael Arcángel</span>
+                                </div>
+                                <div class="flex items-center justify-between text-gray-300">
+                                    <span><i class="fa-solid fa-calendar-day text-gold-400 mr-2"></i><strong>Misa:</strong> Viernes - 15:00 hrs</span>
+                                </div>
+                                <div class="flex items-center justify-between text-gray-300">
+                                    <span><i class="fa-solid fa-cross text-gold-400 mr-2"></i><strong>Cementerio:</strong> Cementerio Municipal de San Rafael</span>
+                                </div>
+                            </div>
+
+                            <!-- Interactive Buttons -->
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <button onclick="toggleCandle()" id="candle-btn" class="flex-1 bg-gold-600/20 hover:bg-gold-600/30 text-gold-300 border border-gold-500/40 py-2.5 px-4 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition">
+                                    <i class="fa-solid fa-fire text-amber-400"></i>
+                                    <span id="candle-text">Encender Vela Virtual (<span id="candle-count">38</span>)</span>
+                                </button>
+                                <button onclick="openCondolenceModal()" class="flex-1 bg-dark-700 hover:bg-dark-600 text-white border border-dark-500 py-2.5 px-4 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition">
+                                    <i class="fa-solid fa-pen-nib text-gold-400"></i>
+                                    <span>Dejar Condolencia</span>
+                                </button>
+                            </div>
+
+                            <!-- Share Buttons -->
+                            <div class="mt-4 pt-4 border-t border-dark-700 flex items-center justify-center gap-3 text-xs">
+                                <span class="text-gray-400">Compartir noticia:</span>
+                                <a href="https://wa.me/?text=Información%20del%20Velatorio%20de%20Juan%20Pérez%20González%20en%20San%20Rafael" target="_blank" class="bg-emerald-600/30 text-emerald-300 border border-emerald-500/30 px-3 py-1.5 rounded-lg hover:bg-emerald-600/50 transition">
+                                    <i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp
+                                </a>
+                                <button onclick="copyObituaryLink()" class="bg-dark-700 text-gray-300 px-3 py-1.5 rounded-lg hover:bg-dark-600 transition">
+                                    <i class="fa-solid fa-link mr-1"></i> <span id="copy-btn-text">Copiar Link</span>
+                                </button>
+                            </div>
+
+                            <!-- Condolences List -->
+                            <div class="mt-6 text-left">
+                                <span class="text-[10px] text-gold-400 font-bold uppercase tracking-wider block mb-2">Condolencias de la comunidad:</span>
+                                <div id="condolences-list" class="space-y-2 max-h-32 overflow-y-auto pr-1">
+                                    <div class="bg-dark-800 p-2.5 rounded-lg border border-dark-700 text-xs">
+                                        <div class="flex justify-between text-gray-400 text-[10px] mb-1">
+                                            <span class="font-bold text-gray-200">Familia Morales Silva</span>
+                                            <span>Hace 15 min</span>
+                                        </div>
+                                        <p class="text-gray-300 italic">"Un abrazo fraterno para la familia en este momento de dolor."</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- STEPS: WHAT TO DO ON A DEATH -->
+    <section id="pasos" class="py-16 bg-dark-800 border-b border-gold-600/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-400 text-xs font-bold tracking-widest uppercase mb-2 block">Guía de Pasos Rápidos</span>
+                <h2 class="text-2xl sm:text-4xl font-serif font-bold text-white mb-4">
+                    ¿Qué hacer ante un fallecimiento?
+                </h2>
+                <p class="text-gray-300 text-sm sm:text-base">
+                    Nos encargamos de toda la gestión técnica, traslados e inscripción legal para aliviar a tu familia.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-dark-900 rounded-2xl p-8 border border-gold-500/20 relative hover:border-gold-500/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 text-gold-400 font-serif font-bold text-xl flex items-center justify-center mb-6">
+                        01
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Contacto telefónico 24/7</h3>
+                    <p class="text-xs text-gray-300 leading-relaxed mb-4">
+                        Llámanos a nuestro número directo de emergencias en San Rafael: <strong>+56 9 9140 3031</strong>.
+                    </p>
+                    <span class="text-[11px] text-gold-400 block font-medium"><i class="fa-solid fa-check mr-1"></i> Asistencia inmediata a cualquier hora</span>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-dark-900 rounded-2xl p-8 border border-gold-500/20 relative hover:border-gold-500/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 text-gold-400 font-serif font-bold text-xl flex items-center justify-center mb-6">
+                        02
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Traslado y Registro Civil</h3>
+                    <p class="text-xs text-gray-300 leading-relaxed mb-4">
+                        Desplazamos nuestro vehículo para el retiro desde hospital o domicilio. Tramitamos el certificado médico y la Cuota Mortuoria.
+                    </p>
+                    <span class="text-[11px] text-gold-400 block font-medium"><i class="fa-solid fa-check mr-1"></i> Trámites 100% cubiertos</span>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-dark-900 rounded-2xl p-8 border border-gold-500/20 relative hover:border-gold-500/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 text-gold-400 font-serif font-bold text-xl flex items-center justify-center mb-6">
+                        03
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Velatorio y Despedida</h3>
+                    <p class="text-xs text-gray-300 leading-relaxed mb-4">
+                        Preparamos el altar, arreglos florales y la movilización con la mayor solemnidad hasta el cementerio o crematorio.
+                    </p>
+                    <span class="text-[11px] text-gold-400 block font-medium"><i class="fa-solid fa-check mr-1"></i> Acompañamiento humano</span>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="tel:+56991403031" class="inline-flex items-center gap-3 bg-gold-500 hover:bg-gold-400 text-dark-900 font-bold px-8 py-3.5 rounded-xl text-sm transition shadow-lg">
+                    <i class="fa-solid fa-headset text-base"></i>
+                    <span>Llamar al +56 9 9140 3031 para recibir apoyo</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES & PLANS -->
+    <section id="servicios" class="py-16 bg-dark-900 border-b border-gold-600/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-gold-400 text-xs font-bold tracking-widest uppercase mb-2 block">Planes Transparentes</span>
+                <h2 class="text-2xl sm:text-4xl font-serif font-bold text-white mb-4">
+                    Nuestros Servicios Funerarios
+                </h2>
+                <p class="text-gray-300 text-sm sm:text-base">
+                    Adaptados para cubrir la necesidad inmediata con la máxima dignidad.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Plan Tradicional -->
+                <div class="bg-dark-800 rounded-2xl border border-dark-600 p-6 flex flex-col justify-between hover:border-gold-500/40 transition">
+                    <div>
+                        <div class="text-xs text-gold-400 font-semibold mb-2">Servicio Esencial</div>
+                        <h3 class="text-xl font-serif font-bold text-white mb-2">Plan Tradicional Simón González</h3>
+                        <p class="text-xs text-gray-400 mb-6">Diseñado para cubrir la necesidad básica con la asignación por muerte.</p>
+
+                        <div class="text-xl font-bold text-white mb-6 pb-4 border-b border-dark-700">
+                            Financiado con Cuota Mortuoria
+                        </div>
+
+                        <ul class="space-y-3 text-xs text-gray-300 mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-400"></i> Arca de madera noble lustrada</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-400"></i> Traslado local en San Rafael</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-400"></i> Capilla ardiente y cirios</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-400"></i> Tramitación Registro Civil e IPS</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-400"></i> Obituario Digital en línea gratis</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-400"></i> Carroza fúnebre al cementerio</li>
+                        </ul>
+                    </div>
+
+                    <button onclick="openQuoteModal('Plan Tradicional Simón González')" class="w-full bg-dark-700 hover:bg-gold-500 hover:text-dark-900 text-white font-bold py-3 rounded-xl text-xs border border-gold-500/30 transition">
+                        Solicitar Cotización por WhatsApp
+                    </button>
+                </div>
+
+                <!-- Plan Excelencia -->
+                <div class="bg-dark-800 rounded-2xl border-2 border-gold-500 p-6 flex flex-col justify-between relative shadow-xl gold-glow">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold-500 text-dark-900 font-bold text-[10px] px-3 py-1 rounded-full uppercase tracking-wider">
+                        Recomendado
+                    </div>
+                    <div>
+                        <div class="text-xs text-gold-400 font-semibold mb-2 mt-2">Servicio Integral</div>
+                        <h3 class="text-xl font-serif font-bold text-white mb-2">Plan Excelencia Memoria</h3>
+                        <p class="text-xs text-gray-400 mb-6">Atención completa con detalles de fina terminación y arreglos florales.</p>
+
+                        <div class="text-xl font-bold text-white mb-6 pb-4 border-b border-dark-700">
+                            Cobertura de Asignación + Financiación
+                        </div>
+
+                        <ul class="space-y-3 text-xs text-gray-300 mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-400"></i> Arca fina tallada en madera noble</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-400"></i> Traslado regional (San Rafael, Talca, Pelarco)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-400"></i> Capilla ardiente completa + arreglos florales</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-400"></i> Gestión prioritaria de trámites legales</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-400"></i> Obituario Digital VIP con libro de condolencias</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-400"></i> Vehículo de acompañamiento para familiares</li>
+                        </ul>
+                    </div>
+
+                    <button onclick="openQuoteModal('Plan Excelencia Memoria')" class="w-full bg-gold-500 hover:bg-gold-400 text-dark-900 font-bold py-3 rounded-xl text-xs shadow-md transition">
+                        Solicitar Cotización por WhatsApp
+                    </button>
+                </div>
+
+                <!-- Plan Cremación -->
+                <div class="bg-dark-800 rounded-2xl border border-dark-600 p-6 flex flex-col justify-between hover:border-gold-500/40 transition">
+                    <div>
+                        <div class="text-xs text-gold-400 font-semibold mb-2">Cremación / Incineración</div>
+                        <h3 class="text-xl font-serif font-bold text-white mb-2">Servicio de Cremación</h3>
+                        <p class="text-xs text-gray-400 mb-6">Alternativa sobria con traslado a recinto cinerario y entrega de urna.</p>
+
+                        <div class="text-xl font-bold text-white mb-6 pb-4 border-b border-dark-700">
+                            Gestión Sanitaria Integral
+                        </div>
+
+                        <ul class="space-y-3 text-xs text-gray-300 mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-400"></i> Arca especial para proceso de cremación</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-400"></i> Traslado e inscripción en crematorio</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-400"></i> Urna cineraria de madera fina</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-400"></i> Opción de velación previa en San Rafael</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-400"></i> Obtención de permisos de Salud</li>
+                        </ul>
+                    </div>
+
+                    <button onclick="openQuoteModal('Servicio de Cremación')" class="w-full bg-dark-700 hover:bg-gold-500 hover:text-dark-900 text-white font-bold py-3 rounded-xl text-xs border border-gold-500/30 transition">
+                        Solicitar Cotización por WhatsApp
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LOCATION & MAP -->
+    <section id="ubicacion" class="py-16 bg-dark-800 border-b border-gold-600/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6">
+                    <span class="text-gold-400 text-xs font-bold tracking-widest uppercase mb-2 block">Atención Local</span>
+                    <h2 class="text-2xl sm:text-4xl font-serif font-bold text-white mb-6">
+                        Ubicación en San Rafael
+                    </h2>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                        Nuestra oficina está situada en una zona de fácil acceso para toda la comunidad de San Rafael y sectores rurales aledaños.
+                    </p>
+
+                    <div class="space-y-4 text-xs sm:text-sm text-gray-300 mb-8">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-gold-400 text-lg mt-1"></i>
+                            <div>
+                                <strong>Dirección Exacta:</strong>
+                                <p class="text-xs text-gray-400">Av. Poniente c/ Bascuñán, frente a la placilla, San Rafael, Región del Maule, Chile.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-phone text-gold-400 text-lg mt-1"></i>
+                            <div>
+                                <strong>Teléfono de Urgencias (24 Horas):</strong>
+                                <p class="text-xs text-gray-400">+56 9 9140 3031</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-share-nodes text-gold-400 text-lg mt-1"></i>
+                            <div>
+                                <strong>Redes Sociales Oficiales:</strong>
+                                <p class="text-xs text-gray-400">Facebook: Funeraria Simon Gonzalez | Instagram: @funeralessimongonzalez</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://maps.google.com" target="_blank" class="inline-flex items-center gap-2 bg-dark-700 hover:bg-dark-600 text-gold-300 border border-gold-500/30 px-5 py-3 rounded-xl text-xs font-semibold transition">
+                        <i class="fa-solid fa-map-location-dot text-base text-gold-400"></i>
+                        <span>Ver Mapa de Ruta a nuestra oficina</span>
+                    </a>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="bg-dark-900 rounded-2xl border border-gold-500/30 p-4 shadow-2xl relative">
+                        <div class="w-full h-80 bg-dark-700 rounded-xl relative flex items-center justify-center border border-dark-600 overflow-hidden">
+                            <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                            
+                            <div class="relative z-10 text-center p-6 bg-dark-900/95 rounded-xl border border-gold-500/40 max-w-xs shadow-xl">
+                                <div class="w-12 h-12 bg-dark-800 border border-gold-500/50 text-gold-400 rounded-full flex items-center justify-center mx-auto mb-3">
+                                    <span class="font-serif font-bold text-xl gold-gradient-text">G</span>
+                                </div>
+                                <h4 class="font-serif font-bold text-white text-sm">SIMON GONZALEZ</h4>
+                                <p class="text-[10px] text-gold-400 uppercase tracking-widest mt-0.5">Servicios Funerarios</p>
+                                <p class="text-[11px] text-gray-300 mt-2">Av. Poniente c/ Bascuñán (frente a la placilla)</p>
+                                <span class="inline-block mt-3 text-[10px] bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2.5 py-1 rounded-full font-bold">
+                                    <i class="fa-solid fa-circle text-[8px] mr-1 animate-pulse"></i> Vehículo de Guardia Disponible 24/7
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark-900 text-gray-400 text-xs py-12 border-t border-gold-600/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 pb-8 border-b border-dark-800">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-dark-800 border border-gold-500/40 flex items-center justify-center">
+                        <span class="font-serif font-bold text-lg gold-gradient-text">G</span>
+                    </div>
+                    <div>
+                        <span class="text-white font-serif font-bold text-base block">SIMON GONZALEZ</span>
+                        <span class="text-[10px] text-gold-400 tracking-wider">SERVICIOS FUNERARIOS • SAN RAFAEL</span>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 text-base text-gold-400">
+                    <a href="https://www.facebook.com/search/top?q=Funeraria%20Simon%20Gonzalez" target="_blank" class="hover:text-white transition p-2 bg-dark-800 rounded-lg border border-dark-700">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/funeralessimongonzalez/" target="_blank" class="hover:text-white transition p-2 bg-dark-800 rounded-lg border border-dark-700">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="tel:+56991403031" class="hover:text-white transition p-2 bg-dark-800 rounded-lg border border-dark-700">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left text-[11px]">
+                <p>&copy; 2026 SIMON GONZALEZ Servicios Funerarios. San Rafael, Región del Maule.</p>
+                <p class="text-gold-400 font-medium">Urgencias 24 Horas: +56 9 9140 3031</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FIXED MOBILE STICKY BOTTOM BAR -->
+    <div class="fixed bottom-0 left-0 right-0 z-50 bg-dark-900/95 backdrop-blur-lg border-t border-gold-500/40 p-2.5 md:hidden">
+        <div class="grid grid-cols-2 gap-2">
+            <a href="tel:+56991403031" class="bg-gradient-to-r from-red-700 to-red-600 text-white font-bold py-3 px-3 rounded-xl flex items-center justify-center gap-2 text-xs shadow-lg">
+                <i class="fa-solid fa-phone-flip text-sm"></i>
+                <span>Llamar (+569 9140 3031)</span>
+            </a>
+            <a href="https://wa.me/56991403031?text=Hola,%20necesito%20asistencia%20funeraria%20urgente%20en%20San%20Rafael" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-3 rounded-xl flex items-center justify-center gap-2 text-xs shadow-lg">
+                <i class="fa-brands fa-whatsapp text-base"></i>
+                <span>WhatsApp Urgente</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- MODAL CONDOLENCE -->
+    <div id="modal-condolence" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-dark-800 rounded-2xl border border-gold-500/40 p-6 max-w-md w-full relative shadow-2xl">
+            <button onclick="closeCondolenceModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="font-serif font-bold text-xl text-white mb-1">Enviar Condolencias</h3>
+            <p class="text-xs text-gray-400 mb-4">Para la familia de Juan Pérez González</p>
+
+            <form onsubmit="submitCondolence(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-medium text-gold-300 mb-1">Nombre o Familia:</label>
+                    <input type="text" id="condolence-name" required placeholder="Ej: Familia Morales Silva" class="w-full bg-dark-900 border border-dark-600 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-gold-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-gold-300 mb-1">Mensaje de Apoyo:</label>
+                    <textarea id="condolence-msg" required rows="3" placeholder="Escribe tu condolencia..." class="w-full bg-dark-900 border border-dark-600 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-gold-500"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-gold-500 hover:bg-gold-400 text-dark-900 font-bold py-3 rounded-xl text-xs transition">
+                    Publicar en el Obituario
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL QUOTE -->
+    <div id="modal-quote" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-dark-800 rounded-2xl border border-gold-500/40 p-6 max-w-md w-full relative shadow-2xl">
+            <button onclick="closeQuoteModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="font-serif font-bold text-xl text-white mb-1">Solicitar Información</h3>
+            <p id="quote-plan-title" class="text-xs text-gold-400 font-semibold mb-4">Plan Tradicional Simón González</p>
+
+            <form onsubmit="submitQuoteRequest(event)" class="space-y-3">
+                <div>
+                    <label class="block text-xs font-medium text-gray-300 mb-1">Tu Nombre:</label>
+                    <input type="text" required placeholder="Nombre completo" class="w-full bg-dark-900 border border-dark-600 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-gold-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-gray-300 mb-1">Teléfono:</label>
+                    <input type="tel" required value="+569" class="w-full bg-dark-900 border border-dark-600 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-gold-500">
+                </div>
+                <button type="submit" class="w-full bg-gold-500 hover:bg-gold-400 text-dark-900 font-bold py-3 rounded-xl text-xs transition mt-2">
+                    Enviar Consulta a SIMON GONZALEZ por WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        const previsionData = {
+            'IPS': {
+                title: 'Asignación por Muerte IPS / PGU (Hasta 15 UF aprox.)',
+                amount: '15 UF (~$570.000 - $680.000 CLP)',
+                desc: 'El Instituto de Previsión Social (IPS) otorga la Asignación por Muerte. **SIMON GONZALEZ Servicios Funerarios realiza el trámite directo ante el Estado**, descontando este monto del valor total para evitar desembolsos mayores a la familia.',
+                waText: 'Hola,%20quisiera%20consultar%20por%20la%20Cuota%20Mortuoria%20de%20IPS%20en%20San%20Rafael'
+            },
+            'AFP': {
+                title: 'Cuota Mortuoria AFP (15 UF Fijadas por Ley)',
+                amount: '15 UF (~$570.000 CLP)',
+                desc: 'Toda persona con fondos de pensión o cotizando en AFP (Habitat, Provida, Cuprum, Capital, Modelo, Uno) tiene derecho a 15 UF. **Gestionamos el cobro ante la AFP sin que tengas que hacer trámites presenciales.**',
+                waText: 'Hola,%20quisiera%20consultar%20por%20el%20cobro%20de%20Cuota%20Mortuoria%20en%20AFP'
+            },
+            'CAPREDENA': {
+                title: 'Cuota Mortuoria Capredena / Dipreca',
+                amount: 'Hasta 100% Cobertura según Escala',
+                desc: 'Para personal en retiro o activo de las Fuerzas Armadas y Carabineros de Chile. Tramitamos la asignación directa con la institución.',
+                waText: 'Hola,%20quisiera%20consultar%20por%20la%20cobertura%20Capredena/Dipreca'
+            },
+            'SEGUROS': {
+                title: 'Seguros de Vida / Pólizas Privadas',
+                amount: 'Según Póliza Contratada',
+                desc: 'Entregamos la facturación timbrada requerida por compañías aseguradoras para la pronta indemnización de la familia.',
+                waText: 'Hola,%20quisiera%20consultar%20por%20rendición%20para%20Seguro%20de%20Vida'
+            }
+        };
+
+        function selectPrevision(type) {
+            document.querySelectorAll('.prevision-btn').forEach(btn => {
+                btn.classList.remove('bg-dark-700', 'border-gold-500/40');
+                btn.classList.add('bg-dark-800', 'border-dark-600');
+            });
+            const activeBtn = document.getElementById(`btn-${type}`);
+            if(activeBtn) {
+                activeBtn.classList.remove('bg-dark-800', 'border-dark-600');
+                activeBtn.classList.add('bg-dark-700', 'border-gold-500/40');
+            }
+
+            const data = previsionData[type];
+            document.getElementById('result-title').innerText = data.title;
+            document.getElementById('result-amount').innerText = data.amount;
+            document.getElementById('result-desc').innerHTML = data.desc;
+            document.getElementById('result-whatsapp').href = `https://wa.me/56991403031?text=${data.waText}`;
+        }
+
+        let candleLit = true;
+        let candleCount = 38;
+        function toggleCandle() {
+            const flame = document.getElementById('candle-flame');
+            const btnText = document.getElementById('candle-text');
+            const countSpan = document.getElementById('candle-count');
+
+            if(candleLit) {
+                flame.style.opacity = '0';
+                candleCount++;
+                countSpan.innerText = candleCount;
+                btnText.innerHTML = `Vela Encendida por ti (<span id="candle-count">${candleCount}</span>)`;
+                candleLit = false;
+            } else {
+                flame.style.opacity = '1';
+            }
+        }
+
+        function openCondolenceModal() {
+            document.getElementById('modal-condolence').classList.remove('hidden');
+            document.getElementById('modal-condolence').classList.add('flex');
+        }
+        function closeCondolenceModal() {
+            document.getElementById('modal-condolence').classList.add('hidden');
+            document.getElementById('modal-condolence').classList.remove('flex');
+        }
+        function submitCondolence(e) {
+            e.preventDefault();
+            const name = document.getElementById('condolence-name').value;
+            const msg = document.getElementById('condolence-msg').value;
+
+            const list = document.getElementById('condolences-list');
+            const newItem = document.createElement('div');
+            newItem.className = 'bg-dark-800 p-2.5 rounded-lg border border-gold-500/30 text-xs';
+            newItem.innerHTML = `
+                <div class="flex justify-between text-gold-400 text-[10px] mb-1">
+                    <span class="font-bold text-white">${name}</span>
+                    <span>Ahora mismo</span>
+                </div>
+                <p class="text-gray-300 italic">"${msg}"</p>
+            `;
+            list.prepend(newItem);
+            closeCondolenceModal();
+        }
+
+        function openQuoteModal(planName) {
+            document.getElementById('quote-plan-title').innerText = planName;
+            document.getElementById('modal-quote').classList.remove('hidden');
+            document.getElementById('modal-quote').classList.add('flex');
+        }
+        function closeQuoteModal() {
+            document.getElementById('modal-quote').classList.add('hidden');
+            document.getElementById('modal-quote').classList.remove('flex');
+        }
+        function submitQuoteRequest(e) {
+            e.preventDefault();
+            const plan = document.getElementById('quote-plan-title').innerText;
+            window.open(`https://wa.me/56991403031?text=Hola,%20quisiera%20consultar%20por%20el%20${encodeURIComponent(plan)}%20de%20SIMON%20GONZALEZ%20Servicios%20Funerarios`, '_blank');
+            closeQuoteModal();
+        }
+
+        function copyObituaryLink() {
+            document.execCommand('copy');
+            const btnText = document.getElementById('copy-btn-text');
+            btnText.innerText = '¡Copiado!';
+            setTimeout(() => { btnText.innerText = 'Copiar Link'; }, 2000);
+        }
+    </script>
+</body>
+</html>
